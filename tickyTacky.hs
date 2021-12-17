@@ -44,9 +44,21 @@ nextMove :: String -> String
 nextMove "X" = "O"
 nextMove "O" = "X"
 
+--prints a row with " | " between each item in the row
 printRow :: [[Char]] -> String
 printRow row = intercalate " | " row
 
+--prints the board with numerical guides
+printBoard :: [[[Char]]] -> IO ()
+printBoard board = do
+  putStrLn "   0   1   2"
+  putStrLn $ "0  " ++ printRow (head board)
+  putStrLn $ "  " ++ "-----------"
+  putStrLn $ "1  " ++ printRow (last (take 2 board))
+  putStrLn $ "  " ++ "-----------"
+  putStrLn $ "2  " ++ printRow (last board)
+
+--checks to see if the most recent move has caused a winning scenario
 checkWinner :: String -> [[[Char]]] -> Bool
 checkWinner move board =
   or [
@@ -65,15 +77,7 @@ checkWinner move board =
     (getDiag board) !! 1 == getWinner move
   ]
 
-printBoard :: [[[Char]]] -> IO ()
-printBoard board = do
-  putStrLn "   0   1   2"
-  putStrLn $ "0  " ++ printRow (head board)
-  putStrLn $ "  " ++ "-----------"
-  putStrLn $ "1  " ++ printRow (last (take 2 board))
-  putStrLn $ "  " ++ "-----------"
-  putStrLn $ "2  " ++ printRow (last board)
-
+--runs the game logic, accepting input, checking board state, then proceeding accordingly
 playRound :: [[[Char]]] -> String -> IO ()
 playRound board move = do
   putStrLn $ "It's " ++ (move) ++ "'s turn, choose a square from 0,0 to 2,2 (Horiz, Vert), separated by a comma"
@@ -94,9 +98,9 @@ playRound board move = do
     return()
   else playRound newBoard (nextMove move)
 
+--loads the game and kicks off the playing
 main = do
   putStrLn $ "Let's play tic tac toe!"
   let newBoard = [[" "," "," "],[" "," "," "],[" "," "," "]]
   playRound newBoard "X"
 
-  -- [[""," "," "],[" ","X"," "],[" "," "," "]]
