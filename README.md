@@ -20,11 +20,11 @@ As I got each function to work independently, then together with the other funct
 
 ## Areas for Improvement
 
-I learned quite a bit as I got to know Haskell, and wished that I had started breaking down the assignment into subtasks earlier, because I really enjoyed getting one function to play nicely with another.
+I learned quite a bit as I got to know Haskell, and wished that I had started breaking down the assignment into subtasks earlier because I really enjoyed getting one function to play nicely with another.
 
-In several parts of the app, I opted for "frankenstein-ing" the intended result instead of using functions included in Haskell. I am sure I would pick them up int he future. One example where I managed to avoid the frankenstein mess was with intercalate, which was fun to learn. My checkWinner function was also clunky, and I would liked to have refactored to be a more Haskell-y solution.
+In several parts of the app, I opted for "frankenstein-ing" the intended result instead of using functions included in Haskell. One example where I managed to avoid the frankenstein mess was with intercalate, which was fun to learn. My checkWinner function was also clunky, and I would liked to have refactored to be a more Haskell-y solution.
 
-One big flaw in the application I made was the fact that I didn't handle user input gracefully. It requires users to enter number coordinates, and if they mistype, it could cause the app the crash. I think this could be handled by changing my errorChecker function, or perhaps adding another function in between.
+One big flaw in the application I made was the fact that I didn't handle user input gracefully. It requires users to enter coordinates, which are taken as a string, then parsed to return ints. If the user mistypes and includes two commas for example, it causes the app the crash. I think this could be handled by changing my errorChecker function, or perhaps adding another function in between.
 
 ## Resources
 
