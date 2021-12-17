@@ -4,3 +4,5 @@ My first experience with Haskell was facilitated by several resources, listed be
 
 
 #### Sources
+
+* [Learn You a Haskell](http://learnyouahaskell.com/)
