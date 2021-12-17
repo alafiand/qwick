@@ -1,6 +1,6 @@
 # TIC TAC TOE
 
-My first experience with Haskell was facilitated by several resources, listed below. The resources available for learning Haskell are fewer and farther between than those available for popular OOP languages. The answers I sought were found scattered across numerous sites, often from selfless bloggers who documented their own struggles and triumphs with the language.
+My first experience with Haskell was facilitated by several resources, listed below in the Resources section. The resources available for learning Haskell are fewer and farther between than those available for popular OOP languages. The answers I sought were found scattered across numerous sites, often from selfless bloggers who documented their own struggles and triumphs with the language.
 
 ## Learning Experience
 
