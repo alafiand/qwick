@@ -2,6 +2,8 @@
 
 My first experience with Haskell was facilitated by several resources, listed below. The resources available for learning Haskell are fewer and farther between than those available for popular OOP languages. The answers I sought were found scattered across numerous sites, often from selfless bloggers who documented their own struggles and triumphs with the language.
 
+## Learning Experience
+
 As promised, making the shift to functional programming was jarring and had a learning curve. I started out by watching several generic "Welcome to Haskell" tutorials to get my bearings and set up my developer environment. From there I read Learn You a Haskell to begin learning syntax and basic data manipulation. One concept that I struggled with for large portion of the exercise was the lack of state in the sense that I knew it--there were no global variables representing the board or the player or the status of a given game. I wrote some basic functions to manipulate lists and designed the tic-tac-toe board and began thinking of ways to structure the game.
 
 A big breakthrough happened when I stumbled upon a [hangman](https://gist.github.com/Epitaph64/0cb73c025e5db56da969) game written in Haskell, which laid out the structure of a CLI game. I was able to use that as a model for my first test app, which was a simple text interaction that would repeat (e.g. What is your name? Hello *name*!). I looked at tic-tac-toe games written in several languages to help formulate structure.
@@ -22,7 +24,7 @@ In several parts of the app, I opted for "frankenstein-ing" the intended result 
 
 One big flaw in the application I made was the fact that I didn't handle user input gracefully. It requires users to enter number coordinates, and if they mistype, it could cause the app the crash. I think this could be handled by changing my errorChecker function, or perhaps adding another function in between.
 
-#### Resources
+## Resources
 
 * [Learn You a Haskell](http://learnyouahaskell.com/) - Likely the most well-known reference, this book held my hand for learning the fundamentals, and served as a reference when I got to more complex steps in the app
 * [tutorialspoint](https://www.tutorialspoint.com/haskell/) - Another great reference site with helpful examples, though less friendly navigation
